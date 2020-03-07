@@ -1,0 +1,31 @@
+server:
+  port: 6061
+
+
+
+spring:
+  profiles:
+    active: dev
+---
+
+spring:
+  application:
+    name: configserver6061
+  profiles: dev
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+
+---
+
+spring:
+  application:
+    name: configserver6062
+  profiles: pro
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
